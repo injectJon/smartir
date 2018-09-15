@@ -3,7 +3,7 @@ require( 'dotenv' ).config();
 const mongoose = require( 'mongoose' );
 const express = require( 'express' );
 
-mongoose.connect( 'mongodb://<dbuser>:<dbpassword>@ds155862.mlab.com:55862/heroku_h0m5rgf0' );
+mongoose.connect( process.env.MONGODB_URI );
 
 
 const app = express();
